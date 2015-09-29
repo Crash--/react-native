@@ -95,7 +95,7 @@ var MapView = React.createClass({
     style: View.propTypes.style,
 
     /**
-     * If `true` the app will ask for the user's location and focus on it.
+     * If `true` the app will ask for the user's location and display it.
      * Default value is `false`.
      *
      * **NOTE**: You need to add NSLocationWhenInUseUsageDescription key in
@@ -104,6 +104,12 @@ var MapView = React.createClass({
      */
     showsUserLocation: React.PropTypes.bool,
 
+    /* If `true` the app will and focus on the user's location
+     * Default value is `false`.
+     * **NOTE**: `showsUserLocation` must be set to `true` to follow a user's location.
+     *
+     */
+    followUserLocation: React.PropTypes.bool,
     /**
      * If `false` points of interest won't be displayed on the map.
      * Default value is `true`.
@@ -117,6 +123,7 @@ var MapView = React.createClass({
      * @platform ios
      */
     showsCompass: React.PropTypes.bool,
+
 
     /**
      * If `false` the user won't be able to pinch/zoom the map.
